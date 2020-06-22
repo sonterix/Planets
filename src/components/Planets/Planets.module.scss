@@ -1,0 +1,31 @@
+@import '../../assets/scss/variables';
+
+.Planets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $color-black;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 60%;
+
+  .PlanetItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1080px;
+
+    .NotFound {
+      margin-top: 50px;
+      font-size: $font-xl * 2;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+}
