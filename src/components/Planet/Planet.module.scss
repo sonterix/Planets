@@ -1,0 +1,92 @@
+@import '../../assets/scss/variables';
+
+.Planet {
+  position: relative;
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+  background-size: 380%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  .Data {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0.5);
+    padding: 15px 5px;
+    width: 180px;
+    background-color: rgba($color-black, 0.95);
+    border: 1px solid $color-darkgrey;
+    opacity: 0;
+    transition: transform $trans, opacity $trans;
+
+    > li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+
+      > span {
+        color: $color-white;
+
+        &:first-child {
+          font-size: $font-xs;
+        }
+
+        &:last-child {
+          font-size: $font-xs - 2;
+        }
+      }
+
+      > p {
+        margin-top: 10px;
+        width: 100%;
+        font-size: $font-md;
+        text-align: center;
+        line-height: 1;
+        color: $color-red;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.Mercury {
+    background-position: 50% 100%;
+  }
+
+  &.Venus {
+    background-position: 0% 100%;
+  }
+
+  &.Earth {
+    background-position: 50% 0%;
+  }
+
+  &.Mars {
+    background-position: 100% 0%;
+  }
+
+  &.Jupiter {
+    background-position: 0% 0%;
+  }
+
+  &.Saturn {
+    background-position: 50% 50%;
+  }
+
+  &.Uranus {
+    background-position: 100% 50%;
+  }
+
+  &.Neptune {
+    background-position: 0% 50%;
+  }
+
+  &:hover .Data {
+    transform: translateY(-50%) translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
